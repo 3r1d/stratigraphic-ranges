@@ -275,19 +275,19 @@
         -->
 
         <!-- jsy -->
-        <jar jarfile="${build-lib}/beastlabs.jar" basedir="/home/bob/workspace/BEASTLabs/build" />
-        <jar jarfile="${build-lib}/sa.jar" basedir="/home/bob/workspace/sampled-ancestors/build" />
-        <jar jarfile="${build-lib}/beast2.jar" basedir="/home/bob/workspace/beast2/build" />
+        <jar jarfile="${build-lib}/beastlabs.jar" basedir="~/workspace/BEASTLabs/build" />
+        <jar jarfile="${build-lib}/sa.jar" basedir="~/workspace/sampled-ancestors/build" />
+        <jar jarfile="${build-lib}/beast2.jar" basedir="~/workspace/beast2/build" />
 
         <!-- jsy -->
-        <jar jarfile="${build-lib}/beastfx.jar" basedir="/home/bob/workspace/BeastFX/build" />
+        <jar jarfile="${build-lib}/beastfx.jar" basedir="~/workspace/BeastFX/build" />
 
         <!-- jsy -->
         <copy todir="${build-lib}">
-            <fileset dir="/home/bob/workspace/beast2/lib" includes="*.jar"/>
+            <fileset dir="~/workspace/beast2/lib" includes="*.jar"/>
         </copy>
         <copy todir="${build-lib}">
-            <fileset dir="/home/bob/workspace/BEASTLabs/lib" includes="*.jar"/>
+            <fileset dir="~/workspace/BEASTLabs/lib" includes="*.jar"/>
         </copy>
 
         <javac
@@ -416,9 +416,9 @@
 
     <!-- Install srange package on z5 -->
     <target name="install-srange-package" depends="build">
-        <delete dir="/home/bob/.beast/2.7/sRanges" />
-        <mkdir dir="/home/bob/.beast/2.7/sRanges" />
-        <unzip src="${dist}/${fullName}.zip" dest="/home/bob/.beast/2.7/sRanges"/>
+        <delete dir="~/.beast/2.7/sRanges" />
+        <mkdir dir="~/.beast/2.7/sRanges" />
+        <unzip src="${dist}/${fullName}.zip" dest="~/.beast/2.7/sRanges"/>
     </target>
 
     <!-- Revert to pristine state. -->

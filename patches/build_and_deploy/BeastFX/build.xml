@@ -30,12 +30,12 @@
 	<property name="main_class_BEASTFX" value="beastfx.app.beastfx.BeastFX" />
 	<property name="report" value="${buildFX}/junitreport"/>
 
-    <property name="openjreMac" value="/home/bob/opt/zulu17.34.19-ca-fx-jre17.0.3-macosx_x64"/>
-    <property name="openjreWin" value="/home/bob/opt/zulu17.34.19-ca-fx-jre17.0.3-win_x64/"/>
+    <property name="openjreMac" value="~/opt/zulu17.34.19-ca-fx-jre17.0.3-macosx_x64"/>
+    <property name="openjreWin" value="~/opt/zulu17.34.19-ca-fx-jre17.0.3-win_x64/"/>
 <!--
-    <property name="openjreLnx" value="/home/bob/opt/bellsoft-jre-17.0.4.1-full/"/>
+    <property name="openjreLnx" value="~/opt/bellsoft-jre-17.0.4.1-full/"/>
 -->
-    <property name="openjreLnx" value="/home/bob/opt/zulu17.64.17-ca-fx-jdk17.0.18-linux_x64/"/>
+    <property name="openjreLnx" value="~/opt/zulu17.64.17-ca-fx-jdk17.0.18-linux_x64/"/>
 
 	<path id="classpath">
 		<fileset dir="${libFX}" includes="jam.jar"/>
@@ -252,13 +252,13 @@
     <!-- Install B2 packages on z5 -->
     <target name="install-B2-packages" depends="package" description="install on z">
 
-        <delete dir="/home/bob/.beast/2.7/BEAST.base" />
-        <mkdir dir="/home/bob/.beast/2.7/BEAST.base" />
-        <unzip src="${distFX}/BEAST.base.package.v${version}.zip" dest="/home/bob/.beast/2.7/BEAST.base"/>
+        <delete dir="~/.beast/2.7/BEAST.base" />
+        <mkdir dir="~/.beast/2.7/BEAST.base" />
+        <unzip src="${distFX}/BEAST.base.package.v${version}.zip" dest="~/.beast/2.7/BEAST.base"/>
 
-        <delete dir="/home/bob/.beast/2.7/BEAST.app" />
-        <mkdir dir="/home/bob/.beast/2.7/BEAST.app" />
-        <unzip src="${distFX}/BEAST.app.package.v${version}.zip" dest="/home/bob/.beast/2.7/BEAST.app"/>
+        <delete dir="~/.beast/2.7/BEAST.app" />
+        <mkdir dir="~/.beast/2.7/BEAST.app" />
+        <unzip src="${distFX}/BEAST.app.package.v${version}.zip" dest="~/.beast/2.7/BEAST.app"/>
 
     </target>
 

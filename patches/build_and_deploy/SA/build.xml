@@ -198,10 +198,10 @@
             <classpath>
                 <pathelement path="${classpath}"/>
                 <fileset dir="${lib}" includes="**/*.jar" erroronmissingdir="false"/>
-                <fileset dir="/home/bob/workspace/beast2/lib" includes="**/*.jar"/>
-                <pathelement path="/home/bob/workspace/beast2/build" />
-                <fileset dir="/home/bob/workspace/BeastFX/locallib" includes="**/*.jar"/>
-                <pathelement path="/home/bob/workspace/BeastFX/build" />
+                <fileset dir="~/workspace/beast2/lib" includes="**/*.jar"/>
+                <pathelement path="~/workspace/beast2/build" />
+                <fileset dir="~/workspace/BeastFX/locallib" includes="**/*.jar"/>
+                <pathelement path="~/workspace/BeastFX/build" />
                 <fileset dir="${env.JAVA_FX_HOME}" includes="**/*.jar"/>
             </classpath>
         </javac>
@@ -327,9 +327,9 @@
 
     <!-- Install SA package on z5 -->
     <target name="install-SA-package" depends="build">
-        <delete dir="/home/bob/.beast/2.7/SA" />
-        <mkdir dir="/home/bob/.beast/2.7/SA" />
-        <unzip src="${dist}/${fullName}.zip" dest="/home/bob/.beast/2.7/SA"/>
+        <delete dir="~/.beast/2.7/SA" />
+        <mkdir dir="~/.beast/2.7/SA" />
+        <unzip src="${dist}/${fullName}.zip" dest="~/.beast/2.7/SA"/>
     </target>
 
     <!-- Revert to pristine state. -->
