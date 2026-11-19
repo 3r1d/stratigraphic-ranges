@@ -196,9 +196,9 @@
 
     <!-- Install MM package on z5 -->
     <target name="install-MM-package" depends="addon">
-        <delete dir="~/.beast/2.7/MM" />
-        <mkdir dir="~/.beast/2.7/MM" />
-        <unzip src="${distMM}/MM.addon.v${MMversion}.zip" dest="~/.beast/2.7/MM"/>
+        <delete dir="/home/bob/.beast/2.7/MM" />
+        <mkdir dir="/home/bob/.beast/2.7/MM" />
+        <unzip src="${distMM}/MM.addon.v${MMversion}.zip" dest="/home/bob/.beast/2.7/MM"/>
     </target>
 
 </project>
