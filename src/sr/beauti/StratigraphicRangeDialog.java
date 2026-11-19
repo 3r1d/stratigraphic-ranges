@@ -263,11 +263,18 @@ public class StratigraphicRangeDialog extends DialogPane {
             return;
         }
 
+        //non working version
+        /*
         StratigraphicRange sr = listOfSR.getItems().get(idx);
-
         sr.setID(rangeID.getText());
         sr.taxonFirstOccurrenceInput.get().setID(firstOccurrenceID.getText());
         sr.taxonLastOccurrenceInput.get().setID(lastOccurrenceID.getText());
+        */
+
+        Taxon t1 = new Taxon(firstOccurrenceID.getText());
+        Taxon t2 = new Taxon(lastOccurrenceID.getText());
+        StratigraphicRange sr_ = new StratigraphicRange(rangeID.getText(), t1, t2);
+        listOfSR.getItems().set(idx,sr_);
     }
 
     Pane createDetailsBox() {
