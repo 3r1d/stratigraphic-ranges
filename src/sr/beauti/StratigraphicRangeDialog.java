@@ -547,6 +547,17 @@ public class StratigraphicRangeDialog extends DialogPane {
             });
         hbox12.getChildren().add(importRangeBtn);
 
+        Button exportRangeBtn = new Button("Export");
+        exportRangeBtn.setId("exportRangeBtn");
+        exportRangeBtn.setOnAction(e -> {
+                try {
+                    SRExport sre = new SRExport();
+                    sre.exportFile(listOfSR.getItems());
+                } catch (Exception ex) {
+                    System.out.println("Error occured during stratigraphic ranges export: "+ex);
+                }
+            });
+        hbox12.getChildren().add(exportRangeBtn);
 
         vbox.getChildren().add(hbox12);
 
